@@ -2,19 +2,6 @@
 
 Sitio de una sola página (HTML + CSS + JS, sin dependencias, sin build).
 
-## Estructura de carpetas
-
-```
-aguamarina-piletas/
-├── index.html          # Estructura y contenido de todas las secciones
-├── css/
-│   └── styles.css      # Todos los estilos (paleta, tipografía, responsive)
-├── js/
-│   └── main.js         # Datos de productos, filtros, modal, WhatsApp, animaciones
-└── assets/
-    └── images/          # Carpeta lista para tus fotos reales (ver abajo)
-```
-
 ## Cómo verlo
 
 Abrí `index.html` directamente en el navegador, o serví la carpeta con cualquier
