@@ -17,7 +17,7 @@ const pools = [
   {
     id: 1,
     name: "Pileta Modelo Roma",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/GCdkYngO375m1jugT28zK0IeBLRF02YhIBmqTliLlJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waWxl/dGFzenVtYS5jb20u/YXIvc2l0ZS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8xMC81/NzAtMTAyNHg3Njgu/anBlZw",
     dimensions: "8m x 4m",
     depth: "1,50m de profundidad",
     size: "grande",
@@ -29,7 +29,7 @@ const pools = [
   {
     id: 2,
     name: "Pileta Modelo Capri",
-    image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/M5KSKurNxSjhJ7fm9eK9rfjC9CGmgVrdXIrSWyunBmo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGlsZXRhc2NvcmRv/YmEuYXIvYXNzZXRz/L2ltZy9pbnN0YWxh/Y2lvbmVzL2luc3Rh/bGFjaW9uLTA0Lmpw/Zw",
     dimensions: "7m x 4m",
     depth: "1,40m de profundidad",
     size: "grande",
@@ -41,7 +41,7 @@ const pools = [
   {
     id: 3,
     name: "Pileta Modelo Toscana",
-    image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/058RlFmaTPTlwWT0WqgJolvTHQQKkPqMyuQRfp7Avck/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGlsZXRhcy1kZS1m/aWJyYS5jb20uYXIv/d3AtY29udGVudC91/cGxvYWRzLzIwMTYv/MDUvMTMxMjA3NzZf/MTk5NDM2MDkwNzQ1/NzU3MV8xOTUwMTQz/MTA5X28tQ29waWFy/LTYwMHgzMDAuanBn",
     dimensions: "6m x 3m",
     depth: "1,35m de profundidad",
     size: "mediana",
@@ -53,7 +53,7 @@ const pools = [
   {
     id: 4,
     name: "Pileta Modelo Positano",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/A5PWUKy6sieyOqAzpZCjSvgSUiFvQC3MMhvjEiLIn4g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkxMjUyOS1NTEEx/MDA5MjYwOTM3ODJf/MTIyMDI1LUUud2Vi/cA",
     dimensions: "4,5m x 2,5m",
     depth: "1,30m de profundidad",
     size: "mediana",
@@ -65,7 +65,7 @@ const pools = [
   {
     id: 5,
     name: "Pileta Modelo Ibiza",
-    image: "https://images.unsplash.com/photo-1596178060810-72636e4d0f18?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/RH3fDwBgXzvnCYxWrUi51Qusvd9_4eZhzkgZcOEpFWU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dml2ZW56YS5jb20u/YXIvaW1nL3BpbGV0/YXMvcGlsZXRhc18w/MS5qcGc",
     dimensions: "5m x 2,5m",
     depth: "1,25m de profundidad",
     size: "chica",
@@ -77,7 +77,7 @@ const pools = [
   {
     id: 6,
     name: "Pileta Modelo Amalfi",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80",
+    image: "https://imgs.search.brave.com/SrC-Pmu76X2eYxWotjnZkQAYvm5y02NBsLkTV_EunNs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGlsZXRhcy1kZS1m/aWJyYS5jb20uYXIv/d3AtY29udGVudC91/cGxvYWRzLzIwMTcv/MDcvMTUwMjUzOTVf/NTY3NDkwMjczNDUx/OTkzXzg0NDA0MzAx/NDc3NDU2NzU5ODNf/by02MDB4MzAwLmpw/Zw",
     dimensions: "3,5m x 2m",
     depth: "1,10m de profundidad",
     size: "chica",
@@ -183,21 +183,21 @@ document.addEventListener('keydown', e=>{ if(e.key === 'Escape'){ closeModal(); 
 });
 
 /* ======================================================================
-   MOBILE MENU
+   MENU
    ====================================================================== */
-const hamburgerBtn = document.getElementById('hamburgerBtn');
+const piletasBtn = document.getElementById('piletasBtn');
 const mobileMenu = document.getElementById('mobileMenu');
-hamburgerBtn.addEventListener('click', ()=>{
+piletasBtn.addEventListener('click', ()=>{
   const isOpen = mobileMenu.classList.toggle('active');
-  hamburgerBtn.classList.toggle('open', isOpen);
-  hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  piletasBtn.classList.toggle('open', isOpen);
+  piletasBtn.setAttribute('aria-expanded', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 mobileMenu.querySelectorAll('a').forEach(a=>{
   a.addEventListener('click', ()=>{
     mobileMenu.classList.remove('active');
-    hamburgerBtn.classList.remove('open');
-    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    piletasBtn.classList.remove('open');
+    piletasBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   });
 });

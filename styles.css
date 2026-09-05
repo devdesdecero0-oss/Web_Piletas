@@ -80,21 +80,22 @@ section{padding:88px 0;}
 }
 .navbar .wrap{display:flex; align-items:center; justify-content:space-between; height:76px;}
 .brand{display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:1.3rem; color:var(--deep);}
-.brand-mark{width:38px; height:38px; border-radius:11px; background:linear-gradient(150deg,var(--celeste),var(--pool)); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
-.brand-mark svg{width:22px; height:22px;}
+.brand-mark{width:38px; height:38px; border-radius:11px; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.brand-mark img{width:100%; height:100%; object-fit:cover;}
 .nav-links{display:flex; align-items:center; gap:36px; font-weight:600; color:var(--ink);}
 .nav-links a{position:relative; padding:6px 0; font-size:.98rem;}
 .nav-links a::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--coral); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;}
 .nav-links a:hover::after{transform:scaleX(1);}
 .nav-cta{display:flex; align-items:center; gap:14px;}
 .nav-cta .btn{padding:12px 22px; font-size:.9rem;}
-.hamburger{display:none; width:44px; height:44px; border-radius:12px; border:1.5px solid rgba(10,51,82,.18); background:#fff; align-items:center; justify-content:center;}
-.hamburger span, .hamburger span::before, .hamburger span::after{content:""; display:block; width:20px; height:2px; background:var(--deep); position:relative; transition:transform .25s ease, opacity .25s ease;}
-.hamburger span::before{position:absolute; top:-6px;}
-.hamburger span::after{position:absolute; top:6px;}
-.hamburger.open span{background:transparent;}
-.hamburger.open span::before{transform:translateY(6px) rotate(45deg);}
-.hamburger.open span::after{transform:translateY(-6px) rotate(-45deg);}
+
+.piletas{display:none; width:44px; height:44px; border-radius:12px; border:1.5px solid rgba(10,51,82,.18); background:#fff; align-items:center; justify-content:center;}
+.piletas span, .piletas span::before, .piletas span::after{content:""; display:block; width:20px; height:2px; background:var(--deep); position:relative; transition:transform .25s ease, opacity .25s ease;}
+.piletas span::before{position:absolute; top:-6px;}
+.piletas span::after{position:absolute; top:6px;}
+.piletas.open span{background:transparent;}
+.piletas.open span::before{transform:translateY(6px) rotate(45deg);}
+.piletas.open span::after{transform:translateY(-6px) rotate(-45deg);}
 
 .mobile-menu{
   display:none; position:fixed; inset:76px 0 0 0; z-index:55; background:var(--white);
@@ -108,8 +109,10 @@ section{padding:88px 0;}
 @media (max-width:900px){
   .nav-links{display:none;}
   .nav-cta .btn-outline-dark{display:none;}
-  .hamburger{display:flex;}
-}
+  .piletas{display:flex;}
+  .nav-cta .btn-primary{padding:10px 12px; font-size:0;}  
+  .nav-cta .btn-primary svg{width:20px; height:20px;}
+  }       
 
 /* ============ HERO ============ */
 .hero{
@@ -133,6 +136,8 @@ section{padding:88px 0;}
   animation:heroIn 1s cubic-bezier(.16,.9,.35,1) both;
 }
 .hero-photo img{width:100%; height:100%; object-fit:cover;}
+
+/* Texto del header HERO */
 .hero-badge{
   position:absolute; left:-18px; bottom:34px; background:#fff; color:var(--deep);
   border-radius:20px; padding:16px 20px; box-shadow:var(--shadow-soft); display:flex; align-items:center; gap:12px;
@@ -152,9 +157,14 @@ section{padding:88px 0;}
   .hero .wrap{grid-template-columns:1fr; padding-bottom:40px;}
   .hero-visual{order:-1; aspect-ratio:4/3; max-width:480px; margin:0 auto;}
   .hero-copy{padding-right:0; text-align:left;}
-  .hero-badge{left:12px; bottom:-22px;}
+  .hero-badge{left:12px; bottom:-14px; padding:8px 10px; gap:6px; max-width:145px; border-radius:12px;}
+  .hero-badge .dot{width:24px; height:24px;}
+  .hero-badge .dot svg{width:13px; height:13px;}
+  .hero-badge strong{font-size:.68rem;}
+  .hero-badge span{font-size:.58rem; line-height:1.2;}
   .hero-stats{gap:20px;}
 }
+
 
 /* ============ WAVE DIVIDERS ============ */
 .wave-fill{fill:var(--white);}
@@ -255,6 +265,7 @@ section{padding:88px 0;}
   background:linear-gradient(150deg, var(--deep), var(--pool) 70%, var(--celeste) 140%);
   color:#fff; text-align:center; position:relative; overflow:hidden;
 }
+
 .cta-final .wrap{position:relative; z-index:2; max-width:640px;}
 .cta-final h2{color:#fff; font-size:clamp(1.9rem,4.4vw,2.8rem);}
 .cta-final p{color:rgba(255,255,255,.85); margin-top:16px; font-size:1.08rem;}
